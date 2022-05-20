@@ -19,7 +19,7 @@ docker run \
 	--publish 20-21:20-21/tcp \
 	--publish 40000-40009:40000-40009/tcp \
 	--volume $(pwd)/data:/home/user \
-  --volume $(pwd)/config:/config \
+  	--volume $(pwd)/config:/config \
 	orrious/vsftpd-docker
 ```
 
