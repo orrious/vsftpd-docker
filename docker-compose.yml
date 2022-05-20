@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  ftp-server:
+    environment:
+      - FTP_PASS=user
+      - FTP_USER=pass
+    image: orrious/vsftpd-docker
+    ports:
+      - '20-21:20-21/tcp'
+      - '40000-40009:40000-40009/tcp'
+    volumes:
+      - './consume:/home/scanner'
+      - './config:/config'
